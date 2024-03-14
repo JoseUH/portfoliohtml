@@ -1,0 +1,66 @@
+.header {
+  background-color: grey;
+  @include flex(row, space-around, center, 0);
+  padding: 10px;
+  // header_img
+  &_img {
+    width: 30px;
+  }
+  &_nav {
+    @include tablet {
+      display: none;
+    }
+    &::after {
+      content: "";
+      background-color: yellow;
+      width: 274px;
+      height: 2px;
+      position: absolute;
+      top: 4%;
+    }
+    ul {
+      width: 280px;
+      @include flex(row, space-around, 0, 0);
+      li {
+        a {
+          padding: 10px;
+          border-radius: 10px;
+          &:hover {
+            background-color: $primary;
+            color: $secundary;
+          }
+          color: aliceblue;
+        }
+      }
+    }
+  }
+  &_nav--menu {
+    max-height: 3vh;
+    display: none;
+    @include tablet {
+      display: inline;
+      ul {
+        display: none;
+        li {
+          display: block;
+          background: lightgrey;
+          padding: 10px;
+          border-bottom: 1px solid grey;
+        }
+      }
+      input:checked ~ ul {
+        display: block;
+      }
+      input {
+        display: none;
+      }
+      label {
+        display: inline-block;
+        width: 75px;
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}

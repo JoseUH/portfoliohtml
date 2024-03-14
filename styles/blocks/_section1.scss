@@ -1,0 +1,29 @@
+.section {
+  width: 100vw;
+  min-height: 100vh;
+}
+.main {
+  &_section1 {
+    @include tablet {
+      flex-direction: column
+    }
+    @include flex(row,space-around,center,0);
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)),url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXIlMjBjb2RlfGVufDB8fDB8fHww");
+    background-size: cover;
+    &_div{
+      color: whitesmoke;
+      h1{
+        font-size: $h1;
+        span{
+          color: cyan;
+        }
+      }
+    }
+    &_img{
+        width: 25%;
+        @include tablet{
+          width: 220px;
+        }
+    }
+  }
+}

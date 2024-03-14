@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.header {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: 0;
+  padding: 10px;
+}
+.header_img {
+  width: 30px;
+}
+@media screen and (max-width: 768px) {
+  .header_nav {
+    display: none;
+  }
+}
+.header_nav::after {
+  content: "";
+  background-color: yellow;
+  width: 274px;
+  height: 2px;
+  position: absolute;
+  top: 4%;
+}
+.header_nav ul {
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: 0;
+  flex-wrap: 0;
+}
+.header_nav ul li a {
+  padding: 10px;
+  border-radius: 10px;
+  color: aliceblue;
+}
+.header_nav ul li a:hover {
+  background-color: yellow;
+  color: rgb(17, 15, 15);
+}
+.header_nav--menu {
+  max-height: 3vh;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header_nav--menu {
+    display: inline;
+  }
+  .header_nav--menu ul {
+    display: none;
+  }
+  .header_nav--menu ul li {
+    display: block;
+    background: lightgrey;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+  }
+  .header_nav--menu input:checked ~ ul {
+    display: block;
+  }
+  .header_nav--menu input {
+    display: none;
+  }
+  .header_nav--menu label {
+    display: inline-block;
+    width: 75px;
+  }
+  .header_nav--menu label img {
+    width: 30px;
+  }
+}
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.main_section1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXIlMjBjb2RlfGVufDB8fDB8fHww");
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .main_section1 {
+    flex-direction: column;
+  }
+}
+.main_section1_div {
+  color: whitesmoke;
+}
+.main_section1_div h1 {
+  font-size: 2.5rem;
+}
+.main_section1_div h1 span {
+  color: cyan;
+}
+.main_section1_img {
+  width: 25%;
+}
+@media screen and (max-width: 768px) {
+  .main_section1_img {
+    width: 220px;
+  }
+}/*# sourceMappingURL=style.css.map */
